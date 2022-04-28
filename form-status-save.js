@@ -36,3 +36,7 @@ function verificarStatusSalvo(nome_form) {
         }
     }
 }
+
+function limparStatusFormSalvo(nome_form) {
+    localStorage.removeItem(nome_form);
+}
