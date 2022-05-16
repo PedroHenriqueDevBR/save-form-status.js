@@ -1,13 +1,15 @@
 var inputs = undefined;
 var selects = undefined;
+var textareas = undefined;
 
-function carregarInputs() {
-    inputs = document.getElementsByTagName('input');
+function loadInputs() {
+    inputs = document.querySelectorAll('input:not([type="hidden"]):not([type="password"]):not([type="file"])');
     selects = document.getElementsByTagName('select');
+    textareas = document.getElementsByTagName('textarea');
 }
 
-function salvarStatus(nome_form) {
-    carregarInputs();
+function saveFormStatus(form_name) {
+    loadInputs();
     if (inputs != undefined && selects != undefined) {
         var input_objects = [];
 
@@ -20,13 +22,13 @@ function salvarStatus(nome_form) {
             'value': select.value,
         });
 
-        localStorage.setItem(nome_form, JSON.stringify(input_objects));
+        localStorage.setItem(form_name, JSON.stringify(input_objects));
     }
 }
 
-function verificarStatusSalvo(nome_form) {
-    carregarInputs();
-    var data_form = localStorage.getItem(nome_form);
+function loadFormStatus(form_name) {
+    loadInputs();
+    var data_form = localStorage.getItem(form_name);
     if (data_form != null) {
         var input_objects = JSON.parse(data_form);
         for (var input of input_objects) {
@@ -37,6 +39,6 @@ function verificarStatusSalvo(nome_form) {
     }
 }
 
-function limparStatusFormSalvo(nome_form) {
-    localStorage.removeItem(nome_form);
+function resetFormStatus(form_name) {
+    localStorage.removeItem(form_name);
 }
