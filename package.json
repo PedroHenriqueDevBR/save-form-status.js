@@ -1,0 +1,27 @@
+{
+  "name": "save-form-status",
+  "version": "1.0.0",
+  "description": "Package to save your current form status.",
+  "main": "form-status-save.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form",
+    "status",
+    "forms"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroHenriqueDevBR/save-form-status.js.git"
+  },
+  "author": "pedrohenriquedevbr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PedroHenriqueDevBR/save-form-status.js/issues"
+  },
+  "homepage": "https://github.com/PedroHenriqueDevBR/save-form-status.js#readme"
+}
