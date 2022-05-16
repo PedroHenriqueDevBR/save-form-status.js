@@ -10,20 +10,36 @@ function loadInputs() {
 
 function saveFormStatus(form_name) {
     loadInputs();
-    if (inputs != undefined && selects != undefined) {
-        var input_objects = [];
+    var input_objects = [];
 
-        for (var input of inputs) input_objects.push({
+    for (var input of inputs) {
+        if ((input.type == 'checkbox' || input.type == 'radio') && input.checked == false) continue;
+        if ((input.type == 'checkbox' || input.type == 'radio') && input.checked == true) {
+            input_objects.push({
+                'id': input.id,
+                'type': input.type,
+                'value': input.value,
+            });
+            continue;
+        }
+        input_objects.push({
             'id': input.id,
+            'type': input.type,
             'value': input.value,
         });
-        for (var select of selects) input_objects.push({
-            'id': select.id,
-            'value': select.value,
-        });
-
-        localStorage.setItem(form_name, JSON.stringify(input_objects));
     }
+    for (var select of selects) input_objects.push({
+        'id': select.id,
+        'type': 'select',
+        'value': select.value,
+    });
+    for (var textarea of textareas) input_objects.push({
+        'id': textarea.id,
+        'type': 'textarea',
+        'value': textarea.value,
+    });
+
+    localStorage.setItem(form_name, JSON.stringify(input_objects));
 }
 
 function loadFormStatus(form_name) {
@@ -33,7 +49,8 @@ function loadFormStatus(form_name) {
         var input_objects = JSON.parse(data_form);
         for (var input of input_objects) {
             if (input.id.length > 0) {
-                document.getElementById(input.id).value = input.value;
+                if ((input.type == 'checkbox' || input.type == 'radio')) document.getElementById(input.id).setAttribute('checked', 'true');
+                else document.getElementById(input.id).value = input.value;
             }
         }
     }
