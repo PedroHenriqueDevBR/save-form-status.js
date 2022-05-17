@@ -1,6 +1,6 @@
 {
   "name": "save-form-status",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Package to save your current form status.",
   "main": "form-status-save.js",
   "directories": {
