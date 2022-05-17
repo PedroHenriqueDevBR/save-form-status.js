@@ -24,11 +24,12 @@ All the input elements in HTML **form** need has **id** attribute, the Save Form
 
 Example link: [https://pedrohenriquedevbr.github.io/site/save-form-status/](https://pedrohenriquedevbr.github.io/site/save-form-status/)
 
+```
 --
  | - index.html
  | - script.js
  | - save-form-status.js
- 
+```
 
 **index.html**
 ```html
