@@ -22,7 +22,7 @@ All the input elements in HTML **form** need has **id** attribute, the Save Form
 
 ## Example
 
-Example link: 
+Example link: ![https://pedrohenriquedevbr.github.io/site/save-form-status/](https://pedrohenriquedevbr.github.io/site/save-form-status/)
 
 --
  | - index.html
@@ -105,7 +105,7 @@ Example link:
 ...
 ```
 
-**index.html**
+**script.js**
 ```javascript
 var FORM_NAME = 'presentation_form';
 var statusJSON = document.getElementById('status-json');
