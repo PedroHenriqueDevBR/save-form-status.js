@@ -5,6 +5,10 @@ Save your form status simply.
 </p>
 
 <p align="center">
+ <a href="https://youtu.be/XJXO_RyFQLo">YouTube video</a>
+</p>
+
+<p align="center">
 <a href="https://github.com/PedroHenriqueDevBR/save-form-status.js/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/PedroHenriqueDevBR/save-form-status.js"></a>
 <a href="https://github.com/PedroHenriqueDevBR/save-form-status.js/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/PedroHenriqueDevBR/save-form-status.js?style=flat-square"></a>
 <a href="https://github.com/PedroHenriqueDevBR/save-form-status.js/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/PedroHenriqueDevBR/save-form-status.js?style=flat-square"></a>
